@@ -4,12 +4,21 @@
   <persistence-unit name="GA1" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>br.unisinos.cc.bd2.ga1.Empresa</class>
+    <class>br.unisinos.cc.bd2.ga1.Departamento</class>
+    <class>br.unisinos.cc.bd2.ga1.Holding</class>
+    <class>br.unisinos.cc.bd2.ga1.Secao</class>
+    <class>br.unisinos.cc.bd2.ga1.Cor</class>
+    <class>br.unisinos.cc.bd2.ga1.Tamanho</class>
+    <class>br.unisinos.cc.bd2.ga1.Categoria</class>
+    <class>br.unisinos.cc.bd2.ga1.Loja</class>
+    <class>br.unisinos.cc.bd2.ga1.Grade</class>
+    <class>br.unisinos.cc.bd2.ga1.Produto</class>
 
     <properties>
       <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-      <property name="hibernate.connection.url" value="jdbc:postgresql:sample"/>
+      <property name="hibernate.connection.url" value="jdbc:postgresql:ga1"/>
       <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
-      <property name="hibernate.connection.username" value="postgres"/>
+      <property name="hibernate.connection.username" value="fuad"/>
       <property name="hibernate.connection.password" value="postgres"/>
       <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.format_sql" value="true"/>

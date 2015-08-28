@@ -12,17 +12,15 @@ import java.util.Collection;
  */
 
 @Entity
-public class Empresa implements java.io.Serializable {
+public class Secao implements java.io.Serializable {
     @Id
-    private Long codigoEmpresa;
+    private Long codigoSecao;
 
-    private String razaoSocial;
-    private String fantasia;
-    private String logradouro;
+    private String nome;
 
     @OneToMany
-    private Collection<Loja> lojas;
+    private Collection<Categoria> categorias;
 
     @ManyToOne
-    private Holding holding;
+    private Departamento departamento;
 }
