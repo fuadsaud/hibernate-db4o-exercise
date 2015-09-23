@@ -3,6 +3,7 @@ package br.unisinos.cc.bd2.ga1;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 import java.util.Collection;
 
@@ -11,12 +12,18 @@ import java.util.Collection;
  */
 
 @Entity
-public class Cor implements java.io.Serializable {
+public class GradeItem implements java.io.Serializable {
     @Id
-    private Long codigoCor;
+    private Long codigoGradeItem;
 
     private String nome;
 
-    @OneToMany
-    private Collection<GradeItem> gradeItens;
+    @ManyToOne
+    private Grade grade;
+
+    @ManyToOne
+    private Cor cor;
+
+    @ManyToOne
+    private Tamanho tamanho;
 }

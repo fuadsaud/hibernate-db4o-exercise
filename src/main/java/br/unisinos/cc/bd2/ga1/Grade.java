@@ -19,4 +19,7 @@ public class Grade implements java.io.Serializable {
 
     @OneToMany
     private Collection<Produto> produtos;
+
+    @OneToMany
+    private Collection<GradeItem> itens;
 }
